@@ -28,12 +28,9 @@ public class TTTConsole {
 				if (currState == ITicTacToe.PLAYING) {
 					System.out.println("Please enter a position 0-8: ");
 					int loc = scanner.nextInt();
-					if ((loc > 8) && (loc < 0)) {
-						board.setMove(HUMAN_PLAYER, loc);
-						board.setMove(COMPUTER_PLAYER, board.getComputerMove());
-					} else {
-						System.out.println("Number is out of bounds. Try a number from 0 to 8");
-					}
+					board.setMove(HUMAN_PLAYER, loc);
+					board.setMove(COMPUTER_PLAYER, board.getComputerMove());
+					
 				}
 
 				if (currState == ITicTacToe.CROSS_WON) {

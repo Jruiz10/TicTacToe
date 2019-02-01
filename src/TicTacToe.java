@@ -10,8 +10,8 @@ import java.util.Scanner;
 public class TicTacToe implements ITicTacToe {
 
 	// The game board and the game status
-	private static final int ROWS = 3, COLS = 3; // number of rows and columns
-	private int[][] board = new int[ROWS][COLS]; // game board in 2D array
+	private static final int ROWS = 3, COLS = 3; 
+	private int[][] board = new int[ROWS][COLS]; 
 	private static int NUM_PLAYS;
 
 	/**
@@ -27,9 +27,7 @@ public class TicTacToe implements ITicTacToe {
 		for (int i = 0; i < ROWS; i++) {
 			for (int j = 0; j < COLS; j++) {
 				board[i][j] = EMPTY;
-				// j++;
 			}
-			// i++;
 		}
 	}
 
@@ -62,7 +60,7 @@ public class TicTacToe implements ITicTacToe {
 				return 3;
 			}
 		}
-		// middle row
+		// Middle row
 		if ((board[1][0] == board[1][1]) && (board[1][1] == board[1][2])) {
 			if (board[1][0] == 1) {
 				return 2;
@@ -71,7 +69,7 @@ public class TicTacToe implements ITicTacToe {
 			}
 		}
 
-		// bottom row
+		// Bottom row
 		if ((board[2][0] == board[2][1]) && (board[2][1] == board[2][2])) {
 			if (board[2][0] == 1) {
 				return 2;
@@ -82,7 +80,7 @@ public class TicTacToe implements ITicTacToe {
 
 		// Check verticals
 
-		// left column
+		// Left column
 		if ((board[0][0] == board[1][0]) && (board[1][0] == board[2][0])) {
 			if (board[0][0] == 1) {
 				return 2;
@@ -91,7 +89,7 @@ public class TicTacToe implements ITicTacToe {
 			}
 		}
 
-		// middle column
+		// Middle column
 		if ((board[0][1] == board[1][1]) && (board[1][1] == board[2][1])) {
 			if (board[0][1] == 1) {
 				return 2;
@@ -100,7 +98,7 @@ public class TicTacToe implements ITicTacToe {
 			}
 		}
 
-		// right column
+		// Right column
 		if ((board[0][2] == board[1][2]) && (board[1][2] == board[2][2])) {
 			if (board[0][2] == 1) {
 				return 2;
